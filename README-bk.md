@@ -38,19 +38,25 @@ mlflow run . -P steps="data_check"
 
 #### 4) Initial Training
 
-- Split Data
+- Split data into test and training sets.
+  - Input: Sample data artifact from wandb.
+  - Output: Training artifact to wandb.
+  - Output: Test artifact to wandb.
+
+```
+mlflow run . -P steps="data_split"
+```
+
 - Train Model
+ - Output: Save `random_forest_export` artifact to wandb
 - Hyper Parameter Tuning
 - Save Model
-
-- Input: Download clean sample data artifact from wandb.
-- Output: Upload trained model artifact to wandb.
 
 #### 4) Pipeline Release and Updates
 
 #### Run Entire Pipeline
 ```
-mlflow run . -P steps="download,basic_cleaning,data_check"
+mlflow run . -P steps="all"
 ```
 
 ### Misc Commands
