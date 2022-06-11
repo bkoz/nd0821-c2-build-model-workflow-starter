@@ -48,6 +48,7 @@ mlflow run . -P steps="data_split"
 ```
 
 - Train Model
+ - Output: Save `random_forest_export` artifact to wandb
 - Hyper Parameter Tuning
 - Save Model
 
