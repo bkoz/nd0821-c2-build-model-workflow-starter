@@ -11,7 +11,7 @@ Updated by bkozdemba@gmail.com
 ## Important Links
 [Weights and Biases public project](https://wandb.ai/koz/nyc_airbnb?workspace=user-koz)
 
-[Github repo for thus project](https://github.com/bkoz/nd0821-c2-build-model-workflow-starter.git)
+[Github repo for this project](https://github.com/bkoz/nd0821-c2-build-model-workflow-starter.git)
 
 ## Table of contents
 
