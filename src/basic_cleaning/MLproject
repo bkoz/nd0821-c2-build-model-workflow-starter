@@ -6,27 +6,27 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: ## ADD DESCRIPTION
+        description: "The name of an artifact which represents an input datafile to be cleaned."
         type: string
 
       output_artifact:
-        description: ## ADD DESCRIPTION
+        description: "The name of an artifact which represents the output datafile that was cleaned."
         type: string
 
       output_type:
-        description: ## ADD DESCRIPTION
+        description: "An output artifact type"
         type: string
 
       output_description:
-        description: ## ADD DESCRIPTION
+        description: "A plain text description of the output artifact."
         type: string
 
       min_price:
-        description: ## ADD DESCRIPTION
+        description: "The minimum price used to filter and remove outliers from the dataset. The type is set to string which I assume is an error."
         type: string
 
       max_price:
-        description: ## ADD DESCRIPTION
+        description: "The maximum price used to filter and remove outliers from the dataset. The type is set to string which I assume is an error."
         type: string
 
 
