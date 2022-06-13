@@ -75,6 +75,9 @@ mlflow run . -P steps="train_random_forest" -P hydra_options="hydra/launcher=job
 Tag the model with the best MAE as `:prod` using the wandb UI.
 
 - Validation Testing
+
+Use `test_dataset` vs. `test_artifact` per the course project assignment page.
+
 ```
 mlflow run . -P steps=test_regression_model
 ```
