@@ -14,7 +14,7 @@ entry_points:
         type: string
 
       output_type:
-        description: "An output artifact type"
+        description: "The output artifact type to be logged."
         type: string
 
       output_description:
