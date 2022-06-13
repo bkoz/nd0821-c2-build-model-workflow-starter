@@ -84,6 +84,44 @@ mlflow run . -P steps=test_regression_model
 
 #### 4) Pipeline Release and Updates
 
+```
+mlflow run https://github.com/bkoz/nd0821-c2-build-model-workflow-starter.git -v 1.0.0 -P hydra_options="etl.sample='sample2.csv'"
+```
+Output
+```
+test_data.py::test_column_names PASSED                                                                                                                   [ 16%]
+test_data.py::test_neighborhood_names PASSED                                                                                                             [ 33%]
+test_data.py::test_proper_boundaries FAILED                                                                                                              [ 50%]
+test_data.py::test_similar_neigh_distrib PASSED                                                                                                          [ 66%]
+test_data.py::test_row_count PASSED                                                                                                                      [ 83%]
+test_data.py::test_price_range PASSED                                                                                                                    [100%]
+
+=========================================================================== FAILURES ===========================================================================
+____________________________________________________________________ test_proper_boundaries ____________________________________________________________________
+
+data =              id                                               name   host_id  ... reviews_per_month calculated_host_li...l's Kitchen  68119814  ...               NaN                              1               23
+
+[46428 rows x 16 columns]
+
+    def test_proper_boundaries(data: pd.DataFrame):
+        """
+        Test proper longitude and latitude boundaries for properties in and around NYC
+        """
+        idx = data['longitude'].between(-74.25, -73.50) & data['latitude'].between(40.5, 41.2)
+    
+>       assert np.sum(~idx) == 0
+E       assert 1 == 0
+E         +1
+E         -0
+
+test_data.py:49: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED test_data.py::test_proper_boundaries - assert 1 == 0
+================================================================= 1 failed, 5 passed in 17.56s 
+```
+
+
+
 #### Run Entire Pipeline
 ```
 mlflow run . -P steps="all"
